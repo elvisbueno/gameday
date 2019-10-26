@@ -2,6 +2,7 @@ var results = "";
 var errorMessage1 = "Sorry, your name is required.";
 var errorMessage2 = "A valid email is required.";
 var errorMessage3 = "You forgot to pick a player.";
+var emailVarification = "Please varify email.";
 var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/; // To validate email string format.
 
 // Form validation and error messages.
@@ -34,7 +35,8 @@ function nominate() {
     ". " +
     "You have nominated player # " +
     player.toUpperCase().fontcolor("yellow") +
-    ". ";
+    ". A confirmation has been sent to the email provided. " +
+    emailVarification.fontcolor("yellow");
   document.getElementById("message1").innerHTML = results;
   resetForm();
 }
